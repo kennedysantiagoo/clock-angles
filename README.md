@@ -12,34 +12,26 @@ A simple rest API that, given an hour and minute number, retrieves the angle bet
 
 # Steps to get database ready and populated:
 
-# 1 
-#  Download a Postgres image in docker
+# 1 Download a Postgres image in docker
 
-# 2  
-# Open your terminal
+# 2 Open your terminal
 
-# 3  
-# Create, run and export a postgres container: 
+# 3 Create, run and export a postgres container: 
  'docker run --name meu-banco -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres'
 
-# 4  
-# Open the Postgres image bash terminal: 
+# 4 Open the Postgres image bash terminal: 
    'sudo docker exec -it yourPostgresContainerID bash' 
 
-# 5 
-#  Enter in the postgres user profile: 
+# 5 Enter in the postgres user profile: 
    'psql -U postgres'
 
-# 6 
-# Create a postgres database:
+# 6 Create a postgres database:
    'CREATE DATABASE mybanco'
 
-# 7 
-# Exit the postgres user:
+# 7 Exit the postgres user:
   '\q'
 
-# 8 
-# Create a table and import data to database:
+# 8 Create a table and import data to database:
  'sudo -u postgres clock_angles < path/on/your/machine/to/the/dump/file/dump.sql'
 
 
